@@ -1,0 +1,52 @@
+{
+  "title": "Choose the art direction",
+  "question": "Three directions built from your references (Motion, Labis, Shiddo), each with a real comp of the landing’s first screen. Pick one and I rebuild /brand in it.",
+  "options": [
+    {
+      "id": "canopy",
+      "label": "Canopy",
+      "lineage": "Labis and Shiddo, a Brazilian rainforest at night",
+      "thesis": "A dark green studio page with an editorial serif and the snake as a carved 3D emblem.",
+      "palette": ["#070d0b", "#123a2e", "#6fd6a8", "#eef5f1"],
+      "materials": ["Instrument Serif display", "Inter text", "mint pill buttons", "3D obsidian snake"],
+      "viewport": "Serif headline left with mint emphasis, the extruded snake emblem right, client work / open source / one team below the fold line.",
+      "risk": "Closest to Labis and Shiddo, so the emblem has to carry the difference.",
+      "comp": ".impeccable/mocks/decision/canopy.png"
+    },
+    {
+      "id": "signal",
+      "label": "Signal",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Motion’s night: the particle sphere becomes the mark",
+      "thesis": "Near-black, one signal yellow, and the logo as a living particle field that forms on load and parts around the cursor.",
+      "palette": ["#08090a", "#f2f2ef", "#ffd60a", "#ff8c28"],
+      "materials": ["Geist display, tight", "Geist Mono uppercase labels", "square hairline buttons", "particle field"],
+      "viewport": "The particle mark fills the stage; headline bottom-left, Get in touch in yellow bottom-right, Motion’s layout.",
+      "risk": "Reads as a dev-tool site; founders may need the copy to say ‘software house’ out loud.",
+      "comp": ".impeccable/mocks/decision/signal.png"
+    },
+    {
+      "id": "calcadao",
+      "label": "Calçadão",
+      "lineage": "Motion’s light footer meets Copacabana’s wave pavement",
+      "thesis": "Stone white and black, a heavy grotesk, and the s’s curve repeated into Copacabana’s pavement waves.",
+      "palette": ["#f4f4f1", "#111111", "#8a8a86"],
+      "materials": ["Schibsted Grotesk ExtraBold", "JetBrains Mono index", "black block buttons", "wave pavement band"],
+      "viewport": "Huge three-line headline left, a numbered index right like Motion’s partner list, the pavement waves owning the lower third.",
+      "risk": "Light-first and loud; the waves must stay a band, never a wallpaper behind text.",
+      "comp": ".impeccable/mocks/decision/calcadao.png"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "comp" },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "A white agency page: blue accent, Inter, product screenshots in a grid.",
+    "palette": ["#ffffff", "#111827", "#2563eb"],
+    "materials": ["Inter", "clean grid", "screenshots"],
+    "viewport": "Centred headline, two buttons, a row of service cards.",
+    "risk": "Indistinguishable from every other software house by design."
+  },
+  "steer": true
+}

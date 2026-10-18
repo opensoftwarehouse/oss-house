@@ -1,0 +1,83 @@
+/* /brand only: the construction guides, the timing sheet, and the numbered
+   index rows. The system itself (tokens, type, buttons, logo) is globals.css. */
+@layer components {
+  .construction {
+    stroke: color-mix(in oklab, var(--foreground) 45%, transparent);
+    .accent {
+      stroke: var(--logo-accent);
+    }
+    .labels {
+      font-family: var(--font-mono);
+      font-size: 6.5px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      fill: var(--muted-foreground);
+      stroke: none;
+    }
+  }
+  @media (max-width: 1023px) {
+    .construction .labels {
+      display: none;
+    }
+  }
+
+  .track-bar {
+    background: color-mix(in oklab, var(--foreground) 22%, transparent);
+    transition: background-color 120ms ease;
+    &[data-done] {
+      background: color-mix(in oklab, var(--foreground) 72%, transparent);
+    }
+    &[data-live] {
+      background: var(--brand);
+    }
+  }
+  .scrubber {
+    appearance: none;
+    height: 1.5rem;
+    background: transparent;
+    accent-color: var(--brand);
+    &::-webkit-slider-runnable-track {
+      height: 1px;
+      background: var(--border);
+    }
+    &::-moz-range-track {
+      height: 1px;
+      background: var(--border);
+    }
+    &::-webkit-slider-thumb {
+      appearance: none;
+      margin-top: -7.5px;
+      width: 16px;
+      height: 16px;
+      background: var(--brand);
+      box-shadow: 0 0 0 3px var(--background);
+    }
+    &::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border: 0;
+      border-radius: 0;
+      background: var(--brand);
+    }
+  }
+
+  /* Numbered rows with a dotted leader, Motion's partner list. */
+  .index-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding-block: 0.875rem;
+    &::after {
+      content: "";
+      order: 2;
+      flex: 1;
+      min-width: 2rem;
+      border-bottom: 1px dotted
+        color-mix(in oklab, var(--foreground) 30%, transparent);
+      translate: 0 -0.25em;
+    }
+    > :nth-child(3) {
+      order: 3;
+    }
+  }
+}

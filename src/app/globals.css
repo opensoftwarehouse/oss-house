@@ -10,7 +10,11 @@
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
   --animate-skeleton: skeleton 2s -1s infinite linear;
-  --font-heading: var(--font-heading);
+  --font-heading: var(--font-display);
+  --font-display: var(--font-display);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-spark: var(--spark);
   --animate-caret-blink: 1s ease-out infinite caret-blink;
   --animate-toast-success-odd: toast-success-odd 0.32s cubic-bezier(0.5, 1, 0.89, 1);
   --animate-toast-success-even: toast-success-even 0.32s cubic-bezier(0.5, 1, 0.89, 1);
@@ -139,7 +143,45 @@
   }
 }
 
+/* Signal: Motion's night for a software house. A class on <html>, set by
+   next-themes (the system's light or dark until someone picks one). Each theme
+   names its seeds: ground, ink, muted ink, focus, the signal yellow with the
+   ink that sits on it, and the spark (orange, only inside the particle mark).
+   Everything else is derived from those seeds below, so a [data-scheme] scope
+   that re-declares them re-derives its own surfaces and hairlines. Muted ink
+   keeps 4.5:1 on the ground. */
+:root,
+[data-scheme="light"] {
+  --background: oklch(0.973 0.003 106);
+  --foreground: oklch(0.18 0 0);
+  --muted-foreground: oklch(0.5 0.006 100);
+  --ring: oklch(0.62 0.006 100);
+  --brand: oklch(0.88 0.18 94);
+  --brand-foreground: oklch(0.18 0.02 90);
+  --spark: oklch(0.64 0.19 45);
+  --logo-accent: oklch(0.66 0.17 65);
+  color-scheme: light;
+}
+.dark,
+[data-scheme="dark"] {
+  --background: oklch(0.135 0.003 250);
+  --foreground: oklch(0.96 0.004 100);
+  --muted-foreground: oklch(0.68 0.006 100);
+  --ring: oklch(0.5 0.006 100);
+  --brand: oklch(0.88 0.18 94);
+  --brand-foreground: oklch(0.18 0.02 90);
+  --spark: oklch(0.74 0.17 52);
+  --logo-accent: var(--brand);
+  color-scheme: dark;
+}
+
 :root {
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sans);
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --radius: 0.125rem;
+
+  --destructive: var(--color-red-500);
   --destructive-foreground: var(--color-red-700);
   --info: var(--color-blue-500);
   --info-foreground: var(--color-blue-700);
@@ -147,98 +189,408 @@
   --success-foreground: var(--color-emerald-700);
   --warning: var(--color-amber-500);
   --warning-foreground: var(--color-amber-700);
-  --background: var(--color-white);
-  --foreground: var(--color-neutral-800);
-  --card: var(--color-white);
-  --card-foreground: var(--color-neutral-800);
-  --popover: var(--color-white);
-  --popover-foreground: var(--color-neutral-800);
-  --primary: var(--color-neutral-800);
-  --primary-foreground: var(--color-neutral-50);
-  --secondary: --alpha(var(--color-black) / 4%);
-  --secondary-foreground: var(--color-neutral-800);
-  --muted: --alpha(var(--color-black) / 4%);
-  --muted-foreground: color-mix(in srgb, var(--color-neutral-500) 90%, var(--color-black));
-  --accent: --alpha(var(--color-black) / 4%);
-  --accent-foreground: var(--color-neutral-800);
-  --destructive: var(--color-red-500);
-  --border: --alpha(var(--color-black) / 8%);
-  --input: --alpha(var(--color-black) / 10%);
-  --ring: var(--color-neutral-400);
-  --chart-1: var(--color-orange-600);
-  --chart-2: var(--color-teal-600);
-  --chart-3: var(--color-cyan-900);
-  --chart-4: var(--color-amber-400);
-  --chart-5: var(--color-amber-500);
-  --radius: 0.625rem;
-  --sidebar: var(--color-neutral-50);
-  --sidebar-foreground: color-mix(in srgb, var(--color-neutral-800) 64%, var(--sidebar));
-  --sidebar-primary: var(--color-neutral-800);
-  --sidebar-primary-foreground: var(--color-neutral-50);
-  --sidebar-accent: --alpha(var(--color-black) / 4%);
-  --sidebar-accent-foreground: var(--color-neutral-800);
-  --sidebar-border: --alpha(var(--color-black) / 6%);
-  --sidebar-ring: var(--color-neutral-400);
-  --code: var(--color-white);
-  --code-foreground: var(--foreground);
-  --code-highlight: --alpha(var(--color-black) / 4%);
+  --chart-1: var(--brand);
+  --chart-2: var(--spark);
+  --chart-3: var(--color-neutral-500);
+  --chart-4: var(--color-neutral-400);
+  --chart-5: var(--color-neutral-300);
+}
+.dark {
+  --destructive: color-mix(in srgb, var(--color-red-500) 90%, var(--color-white));
+  --destructive-foreground: var(--color-red-400);
+  --info-foreground: var(--color-blue-400);
+  --success-foreground: var(--color-emerald-400);
+  --warning-foreground: var(--color-amber-400);
 }
 
-.dark {
-  --destructive-foreground: var(--color-red-400);
-  --info: var(--color-blue-500);
-  --info-foreground: var(--color-blue-400);
-  --success: var(--color-emerald-500);
-  --success-foreground: var(--color-emerald-400);
-  --warning: var(--color-amber-500);
-  --warning-foreground: var(--color-amber-400);
-  --background: color-mix(in srgb, var(--color-neutral-950) 95%, var(--color-white));
-  --foreground: var(--color-neutral-100);
-  --card: color-mix(in srgb, var(--background) 98%, var(--color-white));
-  --card-foreground: var(--color-neutral-100);
-  --popover: color-mix(in srgb, var(--background) 98%, var(--color-white));
-  --popover-foreground: var(--color-neutral-100);
-  --primary: var(--color-neutral-100);
-  --primary-foreground: var(--color-neutral-800);
-  --secondary: --alpha(var(--color-white) / 4%);
-  --secondary-foreground: var(--color-neutral-100);
-  --muted: --alpha(var(--color-white) / 4%);
-  --muted-foreground: color-mix(in srgb, var(--color-neutral-500) 90%, var(--color-white));
-  --accent: --alpha(var(--color-white) / 4%);
-  --accent-foreground: var(--color-neutral-100);
-  --destructive: color-mix(in srgb, var(--color-red-500) 90%, var(--color-white));
-  --border: --alpha(var(--color-white) / 6%);
-  --input: --alpha(var(--color-white) / 8%);
-  --ring: var(--color-neutral-500);
-  --chart-1: var(--color-blue-700);
-  --chart-2: var(--color-emerald-500);
-  --chart-3: var(--color-amber-500);
-  --chart-4: var(--color-purple-500);
-  --chart-5: var(--color-rose-500);
-  --sidebar: color-mix(in srgb, var(--color-neutral-950) 97%, var(--color-white));
-  --sidebar-foreground: color-mix(in srgb, var(--color-neutral-100) 64%, var(--sidebar));
-  --sidebar-primary: var(--color-neutral-100);
-  --sidebar-primary-foreground: var(--color-neutral-800);
-  --sidebar-accent: --alpha(var(--color-white) / 4%);
-  --sidebar-accent-foreground: var(--color-neutral-100);
-  --sidebar-border: --alpha(var(--color-white) / 5%);
-  --sidebar-ring: var(--color-neutral-400);
-  --code: color-mix(in srgb, var(--background) 98%, var(--color-white));
+:root,
+[data-scheme] {
+  --card: color-mix(in oklab, var(--background) 96%, var(--foreground));
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: var(--foreground);
+  --primary-foreground: var(--background);
+  --secondary: color-mix(in oklab, var(--foreground) 5%, transparent);
+  --secondary-foreground: var(--foreground);
+  --muted: color-mix(in oklab, var(--foreground) 5%, transparent);
+  --accent: color-mix(in oklab, var(--foreground) 5%, transparent);
+  --accent-foreground: var(--foreground);
+  --border: color-mix(in oklab, var(--foreground) 13%, transparent);
+  --input: color-mix(in oklab, var(--foreground) 16%, transparent);
+  --code: var(--card);
   --code-foreground: var(--foreground);
-  --code-highlight: --alpha(var(--color-white) / 4%);
+  --code-highlight: color-mix(in oklab, var(--foreground) 5%, transparent);
+  --sidebar: var(--card);
+  --sidebar-foreground: color-mix(in oklab, var(--foreground) 70%, var(--background));
+  --sidebar-primary: var(--foreground);
+  --sidebar-primary-foreground: var(--background);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scrollbar-color: color-mix(in oklab, var(--foreground) 22%, transparent) transparent;
+  }
   body {
     @apply bg-background text-foreground;
   }
-  html {
-    @apply font-mono;
+  [data-scheme] {
+    background: var(--background);
+    color: var(--foreground);
+  }
+  ::selection {
+    background: var(--brand);
+    color: var(--brand-foreground);
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+  input,
+  textarea {
+    caret-color: var(--brand);
   }
   code, kbd, samp, pre {
     font-family: var(--font-mono);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Type and controls. Display is Geist set tight; labels and values are Geist
+   Mono, uppercase and tracked; buttons are square, the primary one a yellow
+   block with a chevron, the rest hairline. */
+@layer components {
+  .display {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.875rem;
+    height: 3rem;
+    padding-inline: 1.375rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition:
+      background-color 150ms ease,
+      color 150ms ease,
+      box-shadow 150ms ease,
+      scale 150ms cubic-bezier(0.23, 1, 0.32, 1);
+    &:active {
+      scale: 0.96;
+    }
+  }
+  .btn-brand {
+    background: var(--brand);
+    color: var(--brand-foreground);
+    @media (hover: hover) {
+      &:hover {
+        background: color-mix(in oklab, var(--brand) 86%, white);
+      }
+    }
+  }
+  /* yellow on off-white needs an edge to read as a button */
+  :root:not(.dark) .btn-brand,
+  [data-scheme="light"] .btn-brand {
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--foreground) 16%, transparent);
+  }
+  .btn-line {
+    box-shadow: inset 0 0 0 1px var(--border);
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--foreground) 40%, transparent);
+      }
+    }
+  }
+}
+
+/* Theme switch (theme-toggle.tsx): the new theme grows from the pressed
+   control as a blurred circle over the old page held still. */
+html[data-reveal]::view-transition-old(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+html[data-reveal]::view-transition-new(root) {
+  mix-blend-mode: normal;
+  animation: circle-reveal 700ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes circle-reveal {
+  from {
+    clip-path: circle(0% at var(--reveal-origin, 50% 0%));
+    filter: blur(8px);
+  }
+  to {
+    clip-path: circle(150% at var(--reveal-origin, 50% 0%));
+    filter: blur(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+/* Logo (logo.tsx). The resting state is the finished mark, so with reduced
+   motion, or `animate` off, the logo is simply there. Each animated element
+   names its track; the track's timing arrives inline as --delay and --dur.
+   [data-seek] parks every track at --seek, which is how the brand page's
+   timing sheet scrubs it. The intro: a yellow dot grows into the ring, the
+   ring opens, the head grows out of it and the eye opens; each s is written
+   in yellow and settles into ink; the tongue flicks once. */
+@layer components {
+  .logo {
+    --h: 2.5rem;
+    --full: calc(var(--h) * 476 / 192);
+    --compact: var(--h);
+    display: inline-block;
+    flex-shrink: 0;
+    width: var(--full);
+    height: var(--h);
+    overflow: hidden;
+    color: var(--logo-ink, currentColor);
+    transition: width 560ms cubic-bezier(0.16, 1, 0.3, 1) 160ms;
+  }
+  .logo svg {
+    display: block;
+    width: var(--full);
+    height: var(--h);
+    overflow: visible;
+  }
+  .logo.fluid {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 476 / 192;
+  }
+  .logo.fluid svg {
+    width: 100%;
+    height: 100%;
+  }
+  .logo[data-compact] {
+    width: var(--compact);
+    transition-delay: 140ms;
+  }
+  .logo [data-track] {
+    animation-duration: var(--dur);
+    animation-delay: var(--delay);
+    animation-fill-mode: both;
+  }
+  .logo[data-seek] [data-track] {
+    animation-play-state: paused;
+    animation-delay: calc(var(--delay) - var(--seek, 0ms));
+  }
+  .logo[data-static] [data-track] {
+    animation: none;
+  }
+  .logo .eye,
+  .logo .t-s,
+  .logo .t-seed {
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  .logo .t-head {
+    transform-box: view-box;
+    transform-origin: 0 0;
+  }
+  .logo .tongue {
+    transform-box: fill-box;
+    transform-origin: left center;
+    scale: 0 1;
+  }
+  .logo .t-open {
+    opacity: 0;
+  }
+  .logo .t-s {
+    stroke: currentColor;
+  }
+
+  .logo .t-seed {
+    animation-name: logo-pop;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .logo .t-ring {
+    animation-name: logo-ring;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .logo .t-open {
+    animation-name: logo-open;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .logo .o {
+    animation-name: logo-o;
+    animation-timing-function: linear;
+  }
+  .logo .t-head {
+    animation-name: logo-pop;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .logo .eye {
+    animation-name: logo-pop;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .logo .t-s {
+    animation-name: logo-write;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .logo .tongue {
+    animation-name: logo-flick;
+    animation-timing-function: cubic-bezier(0.3, 0, 0.2, 1);
+  }
+
+  /* Compact (the header once scrolled): the s's slide left into the coil and
+     vanish there, then the snake turns. Coming back, the snake turns first and
+     the s's follow it out. The coil only swallows while the s's are leaving or
+     away; otherwise the mask steps aside. */
+  .logo .s-slot {
+    transition:
+      translate 520ms cubic-bezier(0.65, 0, 0.35, 1) var(--back, 260ms),
+      opacity 360ms ease var(--back, 260ms);
+  }
+  .logo .s-slot.s2 {
+    --back: 340ms;
+  }
+  .logo .swallow {
+    translate: -1200px 0;
+    transition: translate 0s 1100ms;
+  }
+  .logo .snake-turn {
+    transform-box: view-box;
+    transform-origin: 110px 136px;
+    transition: rotate 820ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+  }
+  .logo[data-compact] .swallow {
+    translate: 0 0;
+    transition-delay: 0s;
+  }
+  .logo[data-compact] .s-slot {
+    translate: -150px 0;
+    opacity: 0;
+    transition-delay: 0ms;
+  }
+  .logo[data-compact] .s-slot.s2 {
+    translate: -296px 0;
+    transition-delay: 80ms;
+  }
+  .logo[data-compact] .snake-turn {
+    rotate: 384deg;
+    transition-delay: 240ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .logo:not([data-seek]) [data-track] {
+      animation: none;
+    }
+    .logo,
+    .logo .s-slot,
+    .logo .snake-turn,
+    .logo .swallow {
+      transition-duration: 0ms;
+      transition-delay: 0ms;
+    }
+  }
+}
+@keyframes logo-pop {
+  from {
+    scale: 0;
+  }
+}
+@keyframes logo-ring {
+  from {
+    r: 0.5px;
+    stroke: var(--logo-accent);
+  }
+  45% {
+    stroke: var(--logo-accent);
+  }
+  to {
+    r: 66px;
+  }
+}
+@keyframes logo-open {
+  from {
+    stroke-dasharray: 1 0;
+    opacity: 1;
+  }
+  94% {
+    stroke-dasharray: 0.8333 0.1667;
+    opacity: 1;
+  }
+  to {
+    stroke-dasharray: 0.8333 0.1667;
+    opacity: 0;
+  }
+}
+@keyframes logo-o {
+  0%,
+  94% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes logo-write {
+  0% {
+    stroke-dasharray: 1 2;
+    stroke-dashoffset: 1;
+    stroke: var(--logo-accent);
+  }
+  62% {
+    stroke-dashoffset: 0;
+    stroke: var(--logo-accent);
+  }
+  100% {
+    stroke-dasharray: 1 2;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes logo-flick {
+  0% {
+    scale: 0 1;
+  }
+  25% {
+    scale: 1 1;
+  }
+  45% {
+    scale: 0.45 1;
+  }
+  65% {
+    scale: 1 1;
+  }
+  100% {
+    scale: 0 1;
   }
 }

@@ -1,0 +1,452 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T18:34:35.045Z",
+  "title": "Design System: OSS House",
+  "extensions": {
+    "colorMeta": {
+      "ground-dark": {
+        "role": "neutral",
+        "displayName": "Night Ground",
+        "canonical": "oklch(0.135 0.003 250)",
+        "tonalRamp": [
+          "oklch(0.15 0.003 250)",
+          "oklch(0.26 0.003 250)",
+          "oklch(0.38 0.003 250)",
+          "oklch(0.49 0.003 250)",
+          "oklch(0.61 0.003 250)",
+          "oklch(0.72 0.003 250)",
+          "oklch(0.84 0.003 250)",
+          "oklch(0.95 0.003 250)"
+        ]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Ink (dark)",
+        "canonical": "oklch(0.96 0.004 100)",
+        "tonalRamp": [
+          "oklch(0.15 0.004 100)",
+          "oklch(0.26 0.004 100)",
+          "oklch(0.38 0.004 100)",
+          "oklch(0.49 0.004 100)",
+          "oklch(0.61 0.004 100)",
+          "oklch(0.72 0.004 100)",
+          "oklch(0.84 0.004 100)",
+          "oklch(0.95 0.004 100)"
+        ]
+      },
+      "muted-ink-dark": {
+        "role": "neutral",
+        "displayName": "Muted Ink (dark)",
+        "canonical": "oklch(0.68 0.006 100)",
+        "tonalRamp": [
+          "oklch(0.15 0.006 100)",
+          "oklch(0.26 0.006 100)",
+          "oklch(0.38 0.006 100)",
+          "oklch(0.49 0.006 100)",
+          "oklch(0.61 0.006 100)",
+          "oklch(0.72 0.006 100)",
+          "oklch(0.84 0.006 100)",
+          "oklch(0.95 0.006 100)"
+        ]
+      },
+      "ring-dark": {
+        "role": "neutral",
+        "displayName": "Focus Ring (dark)",
+        "canonical": "oklch(0.5 0.006 100)",
+        "tonalRamp": [
+          "oklch(0.15 0.006 100)",
+          "oklch(0.26 0.006 100)",
+          "oklch(0.38 0.006 100)",
+          "oklch(0.49 0.006 100)",
+          "oklch(0.61 0.006 100)",
+          "oklch(0.72 0.006 100)",
+          "oklch(0.84 0.006 100)",
+          "oklch(0.95 0.006 100)"
+        ]
+      },
+      "spark-dark": {
+        "role": "secondary",
+        "displayName": "Spark (dark)",
+        "canonical": "oklch(0.74 0.17 52)",
+        "tonalRamp": [
+          "oklch(0.15 0.17 52)",
+          "oklch(0.26 0.17 52)",
+          "oklch(0.38 0.17 52)",
+          "oklch(0.49 0.17 52)",
+          "oklch(0.61 0.17 52)",
+          "oklch(0.72 0.17 52)",
+          "oklch(0.84 0.17 52)",
+          "oklch(0.95 0.17 52)"
+        ]
+      },
+      "ground-light": {
+        "role": "neutral",
+        "displayName": "Paper Ground",
+        "canonical": "oklch(0.973 0.003 106)",
+        "tonalRamp": [
+          "oklch(0.15 0.003 106)",
+          "oklch(0.26 0.003 106)",
+          "oklch(0.38 0.003 106)",
+          "oklch(0.49 0.003 106)",
+          "oklch(0.61 0.003 106)",
+          "oklch(0.72 0.003 106)",
+          "oklch(0.84 0.003 106)",
+          "oklch(0.95 0.003 106)"
+        ]
+      },
+      "ink-light": {
+        "role": "neutral",
+        "displayName": "Ink (light)",
+        "canonical": "oklch(0.18 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.26 0 0)",
+          "oklch(0.38 0 0)",
+          "oklch(0.49 0 0)",
+          "oklch(0.61 0 0)",
+          "oklch(0.72 0 0)",
+          "oklch(0.84 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "muted-ink-light": {
+        "role": "neutral",
+        "displayName": "Muted Ink (light)",
+        "canonical": "oklch(0.5 0.006 100)",
+        "tonalRamp": [
+          "oklch(0.15 0.006 100)",
+          "oklch(0.26 0.006 100)",
+          "oklch(0.38 0.006 100)",
+          "oklch(0.49 0.006 100)",
+          "oklch(0.61 0.006 100)",
+          "oklch(0.72 0.006 100)",
+          "oklch(0.84 0.006 100)",
+          "oklch(0.95 0.006 100)"
+        ]
+      },
+      "ring-light": {
+        "role": "neutral",
+        "displayName": "Focus Ring (light)",
+        "canonical": "oklch(0.62 0.006 100)",
+        "tonalRamp": [
+          "oklch(0.15 0.006 100)",
+          "oklch(0.26 0.006 100)",
+          "oklch(0.38 0.006 100)",
+          "oklch(0.49 0.006 100)",
+          "oklch(0.61 0.006 100)",
+          "oklch(0.72 0.006 100)",
+          "oklch(0.84 0.006 100)",
+          "oklch(0.95 0.006 100)"
+        ]
+      },
+      "spark-light": {
+        "role": "secondary",
+        "displayName": "Spark (light)",
+        "canonical": "oklch(0.64 0.19 45)",
+        "tonalRamp": [
+          "oklch(0.15 0.19 45)",
+          "oklch(0.26 0.19 45)",
+          "oklch(0.38 0.19 45)",
+          "oklch(0.49 0.19 45)",
+          "oklch(0.61 0.19 45)",
+          "oklch(0.72 0.19 45)",
+          "oklch(0.84 0.19 45)",
+          "oklch(0.95 0.19 45)"
+        ]
+      },
+      "logo-amber-light": {
+        "role": "secondary",
+        "displayName": "Logo Amber",
+        "canonical": "oklch(0.66 0.17 65)",
+        "tonalRamp": [
+          "oklch(0.15 0.17 65)",
+          "oklch(0.26 0.17 65)",
+          "oklch(0.38 0.17 65)",
+          "oklch(0.49 0.17 65)",
+          "oklch(0.61 0.17 65)",
+          "oklch(0.72 0.17 65)",
+          "oklch(0.84 0.17 65)",
+          "oklch(0.95 0.17 65)"
+        ]
+      },
+      "signal": {
+        "role": "primary",
+        "displayName": "Signal Yellow",
+        "canonical": "oklch(0.88 0.18 94)",
+        "tonalRamp": [
+          "oklch(0.15 0.18 94)",
+          "oklch(0.26 0.18 94)",
+          "oklch(0.38 0.18 94)",
+          "oklch(0.49 0.18 94)",
+          "oklch(0.61 0.18 94)",
+          "oklch(0.72 0.18 94)",
+          "oklch(0.84 0.18 94)",
+          "oklch(0.95 0.18 94)"
+        ]
+      },
+      "signal-ink": {
+        "role": "primary",
+        "displayName": "Signal Ink",
+        "canonical": "oklch(0.18 0.02 90)",
+        "tonalRamp": [
+          "oklch(0.15 0.02 90)",
+          "oklch(0.26 0.02 90)",
+          "oklch(0.38 0.02 90)",
+          "oklch(0.49 0.02 90)",
+          "oklch(0.61 0.02 90)",
+          "oklch(0.72 0.02 90)",
+          "oklch(0.84 0.02 90)",
+          "oklch(0.95 0.02 90)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page title over the hero and specimen headlines; Geist 600, 3rem to 3.75rem."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles; 2.25rem to 3rem."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Sub-section and panel headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Leads and paragraphs in muted ink, 46ch to 60ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Every label, nav link, caption and button text; mono uppercase tracked."
+      },
+      "num": {
+        "displayName": "Numeric",
+        "purpose": "Hex values, ratios, timecodes, indices; tabular figures."
+      }
+    },
+    "derivedSurfaces": [
+      {
+        "name": "card",
+        "value": "color-mix(in oklab, var(--background) 96%, var(--foreground))"
+      },
+      {
+        "name": "fill-subtle",
+        "value": "color-mix(in oklab, var(--foreground) 5%, transparent)",
+        "purpose": "secondary, muted, accent, code highlight"
+      },
+      {
+        "name": "border",
+        "value": "color-mix(in oklab, var(--foreground) 13%, transparent)"
+      },
+      {
+        "name": "input",
+        "value": "color-mix(in oklab, var(--foreground) 16%, transparent)"
+      },
+      {
+        "name": "scrollbar",
+        "value": "color-mix(in oklab, var(--foreground) 22%, transparent)"
+      },
+      {
+        "name": "leader",
+        "value": "color-mix(in oklab, var(--foreground) 30%, transparent)"
+      }
+    ],
+    "shadows": [
+      {
+        "name": "hairline-edge",
+        "value": "inset 0 0 0 1px color-mix(in oklab, var(--foreground) 13%, transparent)",
+        "purpose": "Line button edge (swatches use 14%)."
+      },
+      {
+        "name": "hover-edge",
+        "value": "inset 0 0 0 1px color-mix(in oklab, var(--foreground) 40%, transparent)",
+        "purpose": "Line button on hover."
+      },
+      {
+        "name": "light-yellow-edge",
+        "value": "inset 0 0 0 1px color-mix(in oklab, var(--foreground) 16%, transparent)",
+        "purpose": "Yellow block on light grounds."
+      },
+      {
+        "name": "ground-halo",
+        "value": "0 0 0 3px var(--background)",
+        "purpose": "Scrubber thumb against its 1px track."
+      }
+    ],
+    "motion": [
+      {
+        "name": "press",
+        "value": "scale 0.96, 150ms cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Every button on :active."
+      },
+      {
+        "name": "state",
+        "value": "150ms ease",
+        "purpose": "Colour and edge transitions on controls."
+      },
+      {
+        "name": "expo-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Logo growth (seed, ring, head, eye), compact width (560ms) and snake turn (820ms)."
+      },
+      {
+        "name": "write",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "Logo s strokes, ring opening, s slide on compact (520ms)."
+      },
+      {
+        "name": "logo-intro",
+        "value": "seed 0+360, ring 300+720, open 980+460, head 1300+460, eye 1700+260, s1 1040+940, s2 1260+940, tongue 2300+520 (ms)",
+        "purpose": "Intro timeline, about 2.8s; resting state is the finished mark."
+      },
+      {
+        "name": "theme-reveal",
+        "value": "circle-reveal 700ms cubic-bezier(0.4, 0, 0.2, 1), blur 8px to 0",
+        "purpose": "New theme grows from the pressed control."
+      },
+      {
+        "name": "header-scroll",
+        "value": "background-color, border-color 300ms",
+        "purpose": "Header takes the ground and a hairline once scrolled."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "nav",
+        "value": "700px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Yellow Block Button",
+      "kind": "button",
+      "refersTo": "button-brand",
+      "description": "The one primary action per group: signal yellow, mono label, trailing chevron.",
+      "html": "<button class=\"ds-btn ds-btn-brand\">See the mark<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m9 18 6-6-6-6\"/></svg></button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.875rem; height: 3rem; padding-inline: 1.375rem; border: 0; border-radius: 0; background: transparent; color: inherit; font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace); font-size: 0.75rem; line-height: 1rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; cursor: pointer; transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease, scale 150ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn:active { scale: 0.96; } .ds-btn:focus-visible { outline: 2px solid var(--ring, oklch(0.5 0.006 100)); outline-offset: 2px; } .ds-btn-brand { background: var(--brand, oklch(0.88 0.18 94)); color: var(--brand-foreground, oklch(0.18 0.02 90)); } .ds-btn-brand:hover { background: color-mix(in oklab, var(--brand, oklch(0.88 0.18 94)) 86%, white); }"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action: transparent with a 1px inset hairline that strengthens on hover.",
+      "html": "<button class=\"ds-btn ds-btn-line\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"/><path d=\"M3 3v5h5\"/></svg>Replay</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.875rem; height: 3rem; padding-inline: 1.375rem; border: 0; border-radius: 0; background: transparent; color: inherit; font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace); font-size: 0.75rem; line-height: 1rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; cursor: pointer; transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease, scale 150ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn:active { scale: 0.96; } .ds-btn:focus-visible { outline: 2px solid var(--ring, oklch(0.5 0.006 100)); outline-offset: 2px; } .ds-btn-line { color: var(--foreground, oklch(0.96 0.004 100)); box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--foreground, oklch(0.96 0.004 100)) 13%, transparent); } .ds-btn-line:hover { box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--foreground, oklch(0.96 0.004 100)) 40%, transparent); }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Fixed 64px header: mark left, mono section links centred; takes the ground and a hairline once scrolled.",
+      "html": "<header class=\"ds-header\" data-scrolled><span class=\"ds-header-mark\">oss</span><ul class=\"ds-header-links\"><li><a href=\"#\">Mark</a></li><li><a href=\"#\">Motion</a></li><li><a href=\"#\">Colour</a></li><li><a href=\"#\">Type</a></li></ul><span class=\"ds-header-end\">EN PT</span></header>",
+      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; height: 4rem; padding-inline: 1.5rem; border-bottom: 1px solid transparent; color: var(--foreground, oklch(0.96 0.004 100)); transition: background-color 300ms, border-color 300ms; } .ds-header[data-scrolled] { background: var(--background, oklch(0.135 0.003 250)); border-color: color-mix(in oklab, var(--foreground, oklch(0.96 0.004 100)) 13%, transparent); } .ds-header-mark { font-weight: 600; letter-spacing: -0.04em; font-size: 1.25rem; } .ds-header-links { display: flex; gap: 1.25rem; margin: 0; padding: 0; list-style: none; } .ds-header-links a, .ds-header-end { font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace); font-size: 0.75rem; line-height: 1rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: inherit; text-decoration: none; transition: color 150ms; } .ds-header-links a:hover { color: var(--muted-foreground, oklch(0.68 0.006 100)); } .ds-header-links a:focus-visible { outline: 2px solid var(--ring, oklch(0.5 0.006 100)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "chip",
+      "refersTo": "segmented-pressed",
+      "description": "Bordered strip of mono options; the pressed one inverts to ink.",
+      "html": "<div class=\"ds-seg\" role=\"group\"><button aria-pressed=\"true\">Top</button><button aria-pressed=\"false\">Scrolled</button></div>",
+      "css": ".ds-seg { display: inline-flex; padding: 0.25rem; border: 1px solid color-mix(in oklab, var(--foreground, oklch(0.96 0.004 100)) 13%, transparent); } .ds-seg button { padding: 0.5rem 0.75rem; border: 0; border-radius: 0; background: transparent; color: var(--muted-foreground, oklch(0.68 0.006 100)); font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace); font-size: 0.75rem; line-height: 1rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: color 150ms; } .ds-seg button:hover { color: var(--foreground, oklch(0.96 0.004 100)); } .ds-seg button[aria-pressed=true] { background: var(--foreground, oklch(0.96 0.004 100)); color: var(--background, oklch(0.135 0.003 250)); } .ds-seg button:focus-visible { outline: 2px solid var(--ring, oklch(0.5 0.006 100)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Panel Grid",
+      "kind": "card",
+      "refersTo": null,
+      "description": "Tiles separated by a 1px gap over the hairline colour, mono captions pinned to the bottom; a tile may take the yellow fill.",
+      "html": "<div class=\"ds-panels\"><figure class=\"ds-tile\"><div class=\"ds-tile-body\">oss</div><figcaption>Full</figcaption></figure><figure class=\"ds-tile ds-tile-signal\"><div class=\"ds-tile-body\">oss</div><figcaption>On yellow</figcaption></figure></div>",
+      "css": ".ds-panels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: color-mix(in oklab, var(--foreground, oklch(0.96 0.004 100)) 13%, transparent); border: 1px solid color-mix(in oklab, var(--foreground, oklch(0.96 0.004 100)) 13%, transparent); } .ds-tile { display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; min-height: 14rem; margin: 0; padding: 1.5rem; background: var(--background, oklch(0.135 0.003 250)); color: var(--foreground, oklch(0.96 0.004 100)); } .ds-tile-body { flex: 1; display: flex; align-items: center; font-size: 2.5rem; font-weight: 600; letter-spacing: -0.04em; } .ds-tile figcaption { font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace); font-size: 0.75rem; line-height: 1rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; } .ds-tile-signal { background: var(--brand, oklch(0.88 0.18 94)); color: var(--brand-foreground, oklch(0.18 0.02 90)); }"
+    },
+    {
+      "name": "Index Row",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Numbered row with a dotted leader and an up-right arrow (content shown is sample).",
+      "html": "<ol class=\"ds-index\"><li><span class=\"ds-index-n\">01</span><span class=\"ds-index-name\">Sample project</span><span class=\"ds-index-note\">Sample note <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></span></li></ol>",
+      "css": ".ds-index { margin: 0; padding: 0; list-style: none; color: var(--foreground, oklch(0.96 0.004 100)); } .ds-index li { display: flex; align-items: baseline; gap: 1rem; padding-block: 0.875rem; } .ds-index li::after { content: \"\"; order: 2; flex: 1; min-width: 2rem; border-bottom: 1px dotted color-mix(in oklab, var(--foreground, oklch(0.96 0.004 100)) 30%, transparent); translate: 0 -0.25em; } .ds-index-n { font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace); font-variant-numeric: tabular-nums; font-size: 0.75rem; color: var(--muted-foreground, oklch(0.68 0.006 100)); } .ds-index-name { font-weight: 500; } .ds-index-note { order: 3; display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--muted-foreground, oklch(0.68 0.006 100)); }"
+    },
+    {
+      "name": "Timing Scrubber",
+      "kind": "input",
+      "refersTo": null,
+      "description": "Range input on a 1px track with a square yellow thumb haloed by the ground.",
+      "html": "<label class=\"ds-scrub\"><span>Time</span><input type=\"range\" min=\"0\" max=\"100\" value=\"40\"></label>",
+      "css": ".ds-scrub { display: flex; align-items: center; gap: 0.75rem; color: var(--muted-foreground, oklch(0.68 0.006 100)); font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace); font-size: 0.75rem; line-height: 1rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; } .ds-scrub input { flex: 1; appearance: none; height: 1.5rem; background: transparent; accent-color: var(--brand, oklch(0.88 0.18 94)); } .ds-scrub input::-webkit-slider-runnable-track { height: 1px; background: color-mix(in oklab, var(--foreground, oklch(0.96 0.004 100)) 13%, transparent); } .ds-scrub input::-moz-range-track { height: 1px; background: color-mix(in oklab, var(--foreground, oklch(0.96 0.004 100)) 13%, transparent); } .ds-scrub input::-webkit-slider-thumb { appearance: none; margin-top: -7.5px; width: 16px; height: 16px; background: var(--brand, oklch(0.88 0.18 94)); box-shadow: 0 0 0 3px var(--background, oklch(0.135 0.003 250)); } .ds-scrub input::-moz-range-thumb { width: 16px; height: 16px; border: 0; border-radius: 0; background: var(--brand, oklch(0.88 0.18 94)); } .ds-scrub input:focus-visible { outline: 2px solid var(--ring, oklch(0.5 0.006 100)); outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Signal",
+    "overview": "Motion's night for a software house. The page is a near-black ground (an off-white one in light), set in ink, with exactly one colour that fills anything: a signal yellow. The mark itself is the spectacle: the lowercase \"oss\" logo, drawn as a field of particles with depth, flies in, settles into its letters, tilts toward the cursor and parts around it inside a sparse shell of dust. Everything around it is quiet, flat and ruled.\n\nDensity is editorial rather than dashboard: wide sections separated by hairlines, a 12-column grid that splits titles from leads, and mono uppercase labels doing the wayfinding. Depth exists in exactly one place, the particle mark. Elsewhere the system is flat, square and hairline-drawn, and its controls feel like instrument panels: tracked mono, square edges, a yellow block for the one action that matters.\n\nThe system is seeded, not painted: each theme declares six seeds (ground, ink, muted ink, focus ring, signal with its ink, spark) and every surface, hairline and fill is mixed from ground and ink. A region that re-declares the seeds under a scheme attribute re-derives itself, which is how light and dark panels sit side by side on one page.",
+    "keyCharacteristics": [
+      "One fill colour (signal yellow); orange appears only inside the particle mark's gradient.",
+      "Geist set tight for display; Geist Mono, uppercase and tracked, for every label, value and control.",
+      "Square everywhere: buttons, panels, swatches, the scrubber thumb.",
+      "Hairline-ruled sections and 1px-gap panel grids instead of cards and shadows.",
+      "A logo that animates in, compacts to the snake on scroll, and is simply finished under reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The One Signal Rule",
+        "body": "Signal Yellow is the only colour that fills a shape. Orange lives only inside the particle mark; nothing else on a surface is hued.",
+        "section": "colors"
+      },
+      {
+        "name": "The Seeded Surface Rule",
+        "body": "Declare only the six seeds per theme. Every surface and hairline is a mix of ink into ground, so any `[data-scheme]` scope re-derives its own world.",
+        "section": "colors"
+      },
+      {
+        "name": "The Light Edge Rule",
+        "body": "On a light ground the yellow block reads as a button only with an edge: a 1px inset ring of 16% ink. Dark mode needs none.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Prose is Geist; anything that labels, counts or acts is Geist Mono uppercase. Never set a paragraph in mono or a button in sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tight Display Rule",
+        "body": "Display sizes always carry −0.04em tracking (the floor) and 1.08 leading; no loose or light display setting.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline-Only Rule",
+        "body": "Edges are 1px insets or 1px borders mixed from ink. Depth belongs to the particle mark alone.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** derive every surface and hairline from ink mixed into ground; declare only the six seeds per theme.",
+      "**Do** keep Signal Yellow as the single fill colour, with Signal Ink on it, and add the 16% ink inset edge to the yellow block on light grounds.",
+      "**Do** set every label, value, nav link and button text in Geist Mono 500 at 0.75rem, uppercase, 0.12em.",
+      "**Do** set display type in Geist 600 at −0.04em and 1.08 leading.",
+      "**Do** separate sections with a top hairline and group panels with a 1px gap over the border colour.",
+      "**Do** let the logo rest finished under reduced motion and compact to the snake in a scrolled header.",
+      "**Do** label demonstration content as sample; real projects, clients and services are not decided yet."
+    ],
+    "donts": [
+      "**Don't** introduce a second fill colour, or use orange outside the particle mark's gradient.",
+      "**Don't** round buttons, panels, swatches or bullets.",
+      "**Don't** use blurred or offset drop shadows; edges are 1px insets.",
+      "**Don't** set paragraphs in mono or buttons in sans.",
+      "**Don't** put a mono label above a section title as a kicker; section headers are the title and its lead.",
+      "**Don't** use yellow strokes inside the logo on a light ground; use Logo Amber."
+    ]
+  }
+}
